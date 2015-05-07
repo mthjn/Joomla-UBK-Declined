@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<extension type="module" version="2.5" client="site" method="upgrade">
+	<name>MOD_FANCYPANTSACCORDION</name>
+	<author>Code 7</author>
+	<creationDate>June 2013</creationDate>
+	<copyright>Copyright (C) 2013 onwards - Code 7</copyright>
+	<license>GNU General Public License version 2 or later</license>
+	<authorEmail>tristan@code7.co.uk</authorEmail>
+	<authorURL>http://www.code7.co.uk</authorURL>
+	<version>3.0</version>
+	<description>MOD_FANCYPANTSACCORDION_DESC</description>
+
+	<files>
+		<filename>mod_fancypantsaccordion.xml</filename>
+		<filename module="mod_fancypantsaccordion">mod_fancypantsaccordion.php</filename>
+		<filename>helper.php</filename>
+		<filename>index.html</filename>
+		<folder>tmpl</folder>
+		<folder>assets</folder>
+		<folder>language</folder>
+	</files>
+
+	<config>
+		<fields name="params">
+			<fieldset name="basic">
+
+				<field name="load_jquery" type="radio" default="1" label="MOD_FANCYPANTSACCORDION_JQUERY_LABEL" description="MOD_FANCYPANTSACCORDION_JQUERY_DESC">
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+
+				<field name="catid" type="category" extension="com_content" multiple="true" defualt="" size="10" label="MOD_FANCYPANTSACCORDION_CATEGORY_LABEL" description="MOD_FANCYPANTSACCORDION_CATEGORY_DESC"/>
+
+				<field name="count" type="text" default="5" label="MOD_FANCYPANTSACCORDION_COUNT_LABEL" description="MOD_FANCYPANTSACCORDION_COUNT_DESC"/>
+
+				<field name="ordering" type="list" default="descending" label="MOD_FANCYPANTSACCORDION_ORDERING_LABEL" description="MOD_FANCYPANTSACCORDION_ORDERING_DESC">
+					<option value="dsc">MOD_FANCYPANTSACCORDION_ORDERING_JOOM_DESC</option>
+					<option value="asc">MOD_FANCYPANTSACCORDION_ORDERING_JOOM_ASC</option>
+					<option value="pubAsc">MOD_FANCYPANTSACCORDION_ORDERING_PUBLISH_ASC</option>
+					<option value="pubDesc">MOD_FANCYPANTSACCORDION_ORDERING_PUBLISH_DESC</option>
+					<option value="alpasc">MOD_FANCYPANTSACCORDION_ORDERING_ALPHA_DESC</option>
+					<option value="alpdesc">MOD_FANCYPANTSACCORDION_ORDERING_ALPHA_ASC</option>
+					<option value="rcnt">MOD_FANCYPANTSACCORDION_ORDERING_RECENT</option>
+					<option value="random">MOD_FANCYPANTSACCORDION_ORDERING_RANDOM</option>
+				</field>
+
+			</fieldset>
+
+			<fieldset name="functionality" label="MOD_FANCYPANTSACCORDION_FUNCTIONALITY">
+
+				<field name="poptotop" type="radio" default="0" label="MOD_FANCYPANTSACCORDION_POPTOTOP_LABEL" description="MOD_FANCYPANTSACCORDION_POPTOTOP_DESC">
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+
+				<field name="firstopen" type="radio" default="0" label="MOD_FANCYPANTSACCORDION_STARTOPEN_LABEL" description="MOD_FANCYPANTSACCORDION_STARTOPEN_DESC">
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+
+				<field name="whichopen" type="text" default="0" label="MOD_FANCYPANTSACCORDION_WHICHOPEN_LABEL" description="MOD_FANCYPANTSACCORDION_WHICHOPEN_DESC" />
+
+				<field name="readmores" type="radio" default="0" label="MOD_FANCYPANTSACCORDION_USE_READMORES_LABEL" description="MOD_FANCYPANTSACCORDION_USE_READMORES_DESC">
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+
+				<field name="render" type="radio" default="0" label="MOD_FANCYPANTSACCORDION_PLUGINS_LABEL" description="MOD_FANCYPANTSACCORDION_PLUGINS_DESC">
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+
+				<field name="close_buttons" type="radio" default="0" label="MOD_FANCYPANTSACCORDION_CLOSE_LABEL" description="MOD_FANCYPANTSACCORDION_CLOSE_DESC">
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+
+			</fieldset>
+
+			<fieldset name="display" label="MOD_FANCYPANTSACCORDION_DISPLAY">
+
+				<field name="showCat" type="radio" default="0" label="MOD_FANCYPANTSACCORDION_SHOWCATEGORY_LABEL" description="MOD_FANCYPANTSACCORDION_SHOWCATEGORY_DESC">
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+
+				<field name="feat" type="radio" default="0" label="MOD_FANCYPANTSACCORDION_FEATURED_LABEL" description="MOD_FANCYPANTSACCORDION_FEATURED_DESC">
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+
+				<field name="headingSize" type="text" default="" label="MOD_FANCYPANTSACCORDION_HEADINGSIZE_LABEL" description="MOD_FANCYPANTSACCORDION_HEADINGSIZE_DESC" />
+
+				<field name="headingHeight" type="text" default="" label="MOD_FANCYPANTSACCORDION_HEADINGHEIGHT_LABEL" description="MOD_FANCYPANTSACCORDION_HEADINGHEIGHT_DESC"/>
+
+				<field name="catSize" type="text" default="" label="MOD_FANCYPANTSACCORDION_CATEGORYSIZE_LABEL" description="MOD_FANCYPANTSACCORDION_CATEGORYSIZE_DESC"/>
+
+			</fieldset>
+
+			<fieldset name="advanced">
+				<field name="layout" type="modulelayout" label="JFIELD_ALT_LAYOUT_LABEL"
+				description="JFIELD_ALT_MODULE_LAYOUT_DESC"/>
+				<field name="moduleclass_sfx" type="text" label="COM_MODULES_FIELD_MODULECLASS_SFX_LABEL"
+				description="COM_MODULES_FIELD_MODULECLASS_SFX_DESC"/>
+				<field name="cache" type="list" default="1" label="COM_MODULES_FIELD_CACHING_LABEL"
+				description="COM_MODULES_FIELD_CACHING_DESC">
+					<option value="1">JGLOBAL_USE_GLOBAL</option>
+					<option value="0">COM_MODULES_FIELD_VALUE_NOCACHING</option>
+				</field>
+				<field name="cache_time" type="text" default="900"
+				label="COM_MODULES_FIELD_CACHE_TIME_LABEL"
+				description="COM_MODULES_FIELD_CACHE_TIME_DESC"/>
+				<field name="cachemode" type="hidden" default="itemid">
+					<option value="itemid"></option>
+				</field>
+			</fieldset>
+		</fields>
+	</config>
+
+	<languages>
+		<language tag="en-GB">language/en-GB/en-GB.mod_fancypantsaccordion.ini</language>
+        <language tag="en-GB">language/en-GB/en-GB.mod_fancypantsaccordion.sys.ini</language>
+	</languages>
+</extension>
