@@ -14,7 +14,7 @@ class JConfig {
 	public $dbtype = 'mysql';
 	public $host = 'localhost';
 	public $user = 'root';
-	public $password = 'heslo';
+	public $password = 'xx';
 	public $db = 'joomla';
 	public $dbprefix = 'p20ne_';
 	public $live_site = '';
@@ -31,7 +31,7 @@ class JConfig {
 	public $offset = 'UTC';
 	public $mailonline = '1';
 	public $mailer = 'mail';
-	public $mailfrom = 'jana.mathauserova@ubk.cz';
+	public $mailfrom = 'xxz';
 	public $fromname = 'Joomla Testsite';
 	public $sendmail = '/usr/sbin/sendmail';
 	public $smtpauth = '0';
@@ -54,8 +54,8 @@ class JConfig {
 	public $sef_suffix = '0';
 	public $unicodeslugs = '0';
 	public $feed_limit = '10';
-	public $log_path = '/var/www/testsitejm.com/public_html/logs';
-	public $tmp_path = '/var/www/testsitejm.com/public_html/tmp';
+	public $log_path = 'xx';
+	public $tmp_path = 'xx';
 	public $lifetime = '15';
 	public $session_handler = 'database';
 	public $memcache_persist = '1';
